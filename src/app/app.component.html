@@ -10,26 +10,27 @@
 
 </head>
 <body>
-{{ formName.value | json }}
+{{ Friend | json }}
 <form #formName="ngForm">
 
   <label>First Name</label><br>
-  <input #inputName="ngModel" type="text"  name="firstname" ngModel><br>
+  <input [(ngModel)]="Friend.firstname" type="text"  name="firstname" ngModel required><br>
 
   <label>Last Name</label><br>
-  <input #inputName="ngModel" type="text" name="lastname" ngModel><br>
+  <input [(ngModel)]="Friend.lastname" type="text" name="lastname" ngModel required><br>
 
   <label>Email</label><br>
-  <input #inputName="ngModel" type="text" name="email" ngModel><br>
+  <input [(ngModel)]="Friend.email" type="text" name="email" ngModel required><br>
 
   <label>Phone Number</label><br>
-  <input #inputName="ngModel" type="text" name="phonenumber" ngModel><br>
+  <input [(ngModel)]="Friend.phonenumber" type="text" name="phonenumber" ngModel required><br>
 
   <label>Favorite Language</label><br>
-    <select #inputName="ngModel" name="language" ngModel>
+    <select [(ngModel)]="Friend.languages" name="language" ngModel required>
       <option *ngFor="let language of languages">{{ language }}</option>
-    </select>
+    </select><br>
 
+  <button id="submit" name="submit">Submit</button>
 
 </form>
 

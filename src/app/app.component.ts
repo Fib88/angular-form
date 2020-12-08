@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Friend } from './friend';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-form';
   languages = ['JavaScript', 'PHP', 'JAVA', 'Python', 'C#'];
+  Friend = {firstname: null, lastname: null, email: null, phonenumber: null, languages: null};
 }
