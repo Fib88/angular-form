@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-form';
+  languages = ['JavaScript', 'PHP', 'JAVA', 'Python', 'C#'];
 }
