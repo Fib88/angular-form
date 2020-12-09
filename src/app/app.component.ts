@@ -8,5 +8,8 @@ import { Friend } from './friend';
 export class AppComponent {
   title = 'angular-form';
   languages = ['JavaScript', 'PHP', 'JAVA', 'Python', 'C#'];
-  friendModel = new Friend('' , '', '', null ,  [] );
+  friendModel = new Friend('' , '', '', null , null );
+  showData(): any {
+    return console.log(this.friendModel);
+  }
 }

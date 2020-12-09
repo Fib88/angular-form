@@ -3,8 +3,8 @@ export class Friend {
   public lastname: string;
   public email: string;
   public phonenumber: number;
-  public languages: [];
-  constructor(firstname: string, lastname: string, email: string, phonenumber: number, languages: []) {
+  public languages: string;
+  constructor(firstname: string, lastname: string, email: string, phonenumber: number, languages: string) {
     this.firstname = firstname;
     this.lastname = lastname;
     this.email = email;

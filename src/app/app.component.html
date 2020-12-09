@@ -12,7 +12,7 @@
 </head>
 <body>
 {{ friendModel | json }}
-<form #formName="ngForm" name="friendForm" novalidate>
+<form #formName="ngForm" name="friendForm" novalidate (ngSubmit)="showData()">
 
   <label>First Name</label><br>
   <input #firstname="ngModel"  type="text"  name="firstname" [(ngModel)]="friendModel.firstname" required [class.wrong]="firstname.invalid && firstname.touched" pattern="^[A-Za-z0-9 ]+$"><br>
