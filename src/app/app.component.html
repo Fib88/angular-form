@@ -12,7 +12,7 @@
 </head>
 <body>
 {{ friendModel | json }}
-<form #formName="ngForm">
+<form #formName="ngForm" name="friendForm">
 
   <label>First Name</label><br>
   <input #firstname="ngModel"  type="text"  name="firstname" [(ngModel)]="friendModel.firstname" required [class.wrong]="firstname.invalid && firstname.touched" pattern="^[^\d]+$ && /[^a-zA-Z0-9 ]/"><br>
@@ -31,7 +31,7 @@
       <option *ngFor="let language of languages">{{ language }}</option>
     </select><br>
 
-  <button id="submit" name="submit">Submit</button>
+  <button id="submit" name="submit" [disabled]="formName.form.invalid">Submit</button>
 
 </form>
 
