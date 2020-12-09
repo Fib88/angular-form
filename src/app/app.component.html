@@ -5,28 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Angular Form</title>
 
 </head>
 <body>
-{{ Friend | json }}
+{{ friendModel | json }}
 <form #formName="ngForm">
 
   <label>First Name</label><br>
-  <input [(ngModel)]="Friend.firstname" type="text"  name="firstname" ngModel required><br>
+  <input #firstname="ngModel"  type="text"  name="firstname" [(ngModel)]="friendModel.firstname" required [class.wrong]="firstname.invalid && firstname.touched"><br>
 
   <label>Last Name</label><br>
-  <input [(ngModel)]="Friend.lastname" type="text" name="lastname" ngModel required><br>
+  <input #lastname="ngModel"  type="text" name="lastname" [(ngModel)]="friendModel.lastname" required [class.wrong]="lastname.invalid && lastname.touched"><br>
 
   <label>Email</label><br>
-  <input [(ngModel)]="Friend.email" type="text" name="email" ngModel required><br>
+  <input #email="ngModel"  type="text" name="email" [(ngModel)]="friendModel.email" required [class.wrong]="email.invalid && email.touched"><br>
 
   <label>Phone Number</label><br>
-  <input [(ngModel)]="Friend.phonenumber" type="text" name="phonenumber" ngModel required><br>
+  <input #phonenumber="ngModel"  type="text" name="phonenumber" [(ngModel)]="friendModel.phonenumber" required [class.wrong]="phonenumber.invalid && phonenumber.touched"><br>
 
   <label>Favorite Language</label><br>
-    <select [(ngModel)]="Friend.languages" name="language" ngModel required>
+    <select #language="ngModel"  name="language" [(ngModel)]="friendModel.languages" required [class.wrong]="language.invalid && language.touched">
       <option *ngFor="let language of languages">{{ language }}</option>
     </select><br>
 

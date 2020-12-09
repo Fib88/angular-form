@@ -8,5 +8,5 @@ import { Friend } from './friend';
 export class AppComponent {
   title = 'angular-form';
   languages = ['JavaScript', 'PHP', 'JAVA', 'Python', 'C#'];
-  Friend = {firstname: null, lastname: null, email: null, phonenumber: null, languages: null};
+  friendModel = {firstname: null, lastname: null, email: null, phonenumber: null, languages: null};
 }
