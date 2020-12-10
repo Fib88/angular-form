@@ -8,15 +8,18 @@ import { AddFriendService} from './add-friend.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  private addFriendService: any;
-  constructor() {
-    this.addFriendService = AddFriendService;
+  constructor(private addFriendService: AddFriendService) {
   }
 
   title = 'angular-form';
   languages = ['JavaScript', 'PHP', 'JAVA', 'Python', 'C#'];
   friendModel = new Friend('' , '', '', null , null );
   showData(): any {
+    this.addFriendService.addFriend(this.friendModel)
+      .subscribe(
+        succes => console.log('It worked'),
+        error => console.log(error)
+      );
     return console.log(this.friendModel);
   }
 }
