@@ -32,6 +32,7 @@ app.post('/', function (request, response) {
 });
 
 app.post('/addFriend', function (request, response) {
+   allFriends.push(request.body);
   response.status(200).send({"message": "Data received"});
 });
 
