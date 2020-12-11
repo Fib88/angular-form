@@ -1,4 +1,4 @@
-#Angular form exercise
+# Angular form exercise
 
 In this exercise i'm going over the excercise made by Tim,
 https://github.com/Timmeahj/angular-exercise.
