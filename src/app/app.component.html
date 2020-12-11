@@ -35,5 +35,15 @@
 
 </form>
 
+<div class="container" *ngFor="let friend of allFriends">
+  <div>
+    First name: {{friend.firstname}}<br>
+    Last name: {{friend.lastname}}<br>
+    Email: {{friend.email}}<br>
+    Phone number: {{friend.phonenumber}}<br>
+    Favorite language: {{friend.languages}}<br>
+  </div>
+  <br>
+</div>
 </body>
 </html>
